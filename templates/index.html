@@ -574,7 +574,7 @@
             <div class="card border-success">
                 <div class="card-header bg-success text-white fw-bold text-center py-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">Stylized Result</div>
                 <div class="card-body p-0">
-                    <img src="{{ url_for('send_image', filename=result_image) }}" class="img-fluid w-100" alt="Stylized Image" style="border-radius: 0 0 20px 20px;">
+                    <img src="{{ url_for('send_image', filename=result_image) }}" class="img-fluid" alt="Stylized Image" style="max-width: 400px; width: 100%; margin: 0 auto; display: block; border-radius: 0 0 20px 20px;">
                 </div>
                 <div class="card-footer text-center" style="background: transparent; border-top: none; padding-bottom: 20px;">
                     <a href="{{ url_for('send_image', filename=result_image) }}" download class="btn btn-outline-light mt-2">Download Result</a>
@@ -602,17 +602,17 @@
                         <div class="example-inputs">
                             <div>
                                 <div class="example-role text-center">Content Image</div>
-                                <img src="{{ url_for('send_example', filename='brad_pitt.jpg') }}" alt="Brad Pitt Content" class="example-image">
+                                <img src="{{ url_for('send_example', filename='house.jpg') }}" alt="Brad Pitt Content" class="example-image">
                             </div>
                             <div>
                                 <div class="example-role text-center">Style Image</div>
-                                <img src="{{ url_for('send_example', filename='sketch.png') }}" alt="Sketch Style" class="example-image">
+                                <img src="{{ url_for('send_example', filename='painting_style.jpg') }}" alt="Sketch Style" class="example-image">
                             </div>
                         </div>
                         <div class="example-arrow">-&gt;</div>
                         <div class="example-output">
                             <div class="example-role text-center">Output</div>
-                            <img src="{{ url_for('send_example', filename='stylized_brad_pitt.jpg') }}" alt="Brad Pitt Sketch Result" class="example-image">
+                            <img src="{{ url_for('send_example', filename='painting_output.jpg') }}" alt="Brad Pitt Sketch Result" class="example-image">
                         </div>
                     </div>
                 </div>
@@ -621,17 +621,17 @@
                         <div class="example-inputs">
                             <div>
                                 <div class="example-role text-center">Content Image</div>
-                                <img src="{{ url_for('send_example', filename='brad_pitt.jpg') }}" alt="Brad Pitt Content" class="example-image">
+                                <img src="{{ url_for('send_example', filename='food.jpg') }}" alt="Brad Pitt Content" class="example-image">
                             </div>
                             <div>
                                 <div class="example-role text-center">Style Image</div>
-                                <img src="{{ url_for('send_example', filename='picasso_seated_nude_hr.jpg') }}" alt="Picasso Seated Nude Style" class="example-image">
+                                <img src="{{ url_for('send_example', filename='1930.jpg') }}" alt="Picasso Seated Nude Style" class="example-image">
                             </div>
                         </div>
                         <div class="example-arrow">-&gt;</div>
                         <div class="example-output">
                             <div class="example-role text-center">Output</div>
-                            <img src="{{ url_for('send_example', filename='stylized_brad_pitt (1).jpg') }}" alt="Brad Pitt Picasso Result" class="example-image">
+                            <img src="{{ url_for('send_example', filename='stylized_food.jpg') }}" alt="Brad Pitt Picasso Result" class="example-image">
                         </div>
                     </div>
                 </div>
