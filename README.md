@@ -51,24 +51,51 @@ stylized output, giving control over style strength.
 └── requirements.txt
 ```
 
-## Setup
+## Running locally
+
+**1. Clone the repo**
 
 ```bash
 git clone <repo-url>
 cd <repo-folder>
+```
+
+**2. Set up a virtual environment**
+
+```bash
 python -m venv venv
 source venv/bin/activate      # Windows: venv\Scripts\activate
+```
+
+**3. Install dependencies**
+
+```bash
 pip install -r requirements.txt
 ```
 
-## Running the web app
+**4. Make sure the pretrained weights are in place**
+
+The app expects two files inside `model_weights/`:
+- `vgg_normalised.pth` — the pretrained VGG encoder
+- `decoder_epoch_135.pth` — the trained decoder checkpoint
+
+Both are already included in this repo.
+
+**5. Run the app**
 
 ```bash
 python app.py
 ```
 
-Then open `http://localhost:5000`, upload a content and style image, adjust
-the style strength slider, and generate a result.
+**6. Open it in your browser**
+
+Go to `http://localhost:5000`, upload a content image and a style image,
+adjust the style strength slider, and click "Transfer Style" to generate
+a result.
+
+> **Note:** Inference runs on CPU by default unless you have CUDA or Apple
+> Silicon (MPS) available, in which case it's picked up automatically.
+> A single style transfer typically takes well under a second locally.
 
 ## Training your own decoder
 
@@ -87,7 +114,11 @@ sample outputs are saved periodically to `experiments/<experiment_name>/`.
 
 ## Limitations
 
-Due to limited compute available for training, the decoder was trained for a relatively small number of epochs. The model works, but results could improve with further training — longer runs, a larger/more diverse dataset, or more GPU time would likely sharpen output quality and generalization to a wider range of styles.
+Due to limited compute available for training, the decoder was trained for
+a relatively small number of epochs. The model works, but results could
+improve with further training — longer runs, a larger/more diverse dataset,
+or more GPU time would likely sharpen output quality and generalization to
+a wider range of styles.
 
 ## Tech stack
 
