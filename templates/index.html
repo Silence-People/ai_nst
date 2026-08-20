@@ -522,8 +522,8 @@
                     <div class="card-header text-center py-3">Content Source</div>
                     <div class="card-body text-center">
                         <div class="preview-image mb-3" id="contentPreview">
-                            {% if content_image %}
-                                <img src="{{ url_for('send_image', filename=content_image) }}" alt="Content Image">
+                            {% if content_filename %}
+                                <img src="{{ url_for('send_image', filename=content_filename) }}" alt="Content Image">
                             {% else %}
                                 <span>Select Content Image</span>
                             {% endif %}
@@ -539,8 +539,8 @@
                     <div class="card-header text-center py-3">Style Reference</div>
                     <div class="card-body text-center">
                         <div class="preview-image mb-3" id="stylePreview">
-                            {% if style_image %}
-                                <img src="{{ url_for('send_image', filename=style_image) }}" alt="Style Image">
+                            {% if style_filename %}
+                                <img src="{{ url_for('send_image', filename=style_filename) }}" alt="Style Image">
                             {% else %}
                                 <span>Select Style Image</span>
                             {% endif %}
